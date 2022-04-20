@@ -27,10 +27,12 @@ const showData = () => {
     },300)
 }
 window.addEventListener('scroll', ()=>{
-    const {scrollHeight,clientHeight,scrollTop} = document.documentElement;
-    if(scrollHeight - scrollTop <= clientHeight + 50){
-    // if(scrollHeight-scrollTop < clientHeight-0.3*clientHeight  ){
-        console.log('I am at bottom');
+    // const {scrollHeight,clientHeight,scrollTop} = document.documentElement;
+    // if(scrollHeight - scrollTop <= clientHeight + 50){
+    // // if(scrollHeight-scrollTop < clientHeight-0.3*clientHeight  ){
+    //     console.log('I am at bottom');
+    if(window.scrollY+window.innerHeight+1>=document.documentElement.scrollHeight){
         showData();
     }
+        
 })
